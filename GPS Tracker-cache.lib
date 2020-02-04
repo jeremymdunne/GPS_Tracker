@@ -1,6 +1,26 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
+# Connector_Conn_01x02_Male
+#
+DEF Connector_Conn_01x02_Male J 0 40 Y N 1 F N
+F0 "J" 0 100 50 H V C CNN
+F1 "Connector_Conn_01x02_Male" 0 -200 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_1x??_*
+$ENDFPLIST
+DRAW
+S 34 -95 0 -105 1 1 6 F
+S 34 5 0 -5 1 1 6 F
+P 2 1 1 6 50 -100 34 -100 N
+P 2 1 1 6 50 0 34 0 N
+X Pin_1 1 200 0 150 L 50 50 1 1 P
+X Pin_2 2 200 -100 150 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # Connector_Conn_01x04_Male
 #
 DEF Connector_Conn_01x04_Male J 0 40 Y N 1 F N
@@ -80,6 +100,50 @@ X ~ 2 0 -150 110 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# Device_Crystal
+#
+DEF Device_Crystal Y 0 40 N N 1 F N
+F0 "Y" 0 150 50 H V C CNN
+F1 "Device_Crystal" 0 -150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Crystal*
+$ENDFPLIST
+DRAW
+S -45 100 45 -100 0 1 12 N
+P 2 0 1 0 -100 0 -75 0 N
+P 2 0 1 20 -75 -50 -75 50 N
+P 2 0 1 20 75 -50 75 50 N
+P 2 0 1 0 100 0 75 0 N
+X 1 1 -150 0 50 R 50 50 1 1 P
+X 2 2 150 0 50 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device_LED
+#
+DEF Device_LED D 0 40 N N 1 F N
+F0 "D" 0 100 50 H V C CNN
+F1 "Device_LED" 0 -100 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ LED*
+ LED_SMD:*
+ LED_THT:*
+$ENDFPLIST
+DRAW
+P 2 0 1 8 -50 -50 -50 50 N
+P 2 0 1 0 -50 0 50 0 N
+P 4 0 1 8 50 -50 50 50 -50 0 50 -50 N
+P 5 0 1 0 -120 -30 -180 -90 -150 -90 -180 -90 -180 -60 N
+P 5 0 1 0 -70 -30 -130 -90 -100 -90 -130 -90 -130 -60 N
+X K 1 -150 0 100 R 50 50 1 1 P
+X A 2 150 0 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # Device_R
 #
 DEF Device_R R 0 0 N Y 1 F N
@@ -94,6 +158,34 @@ DRAW
 S -40 -100 40 100 0 1 10 N
 X ~ 1 0 150 50 D 50 50 1 1 P
 X ~ 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Jumper_SolderJumper_3_Bridged12
+#
+DEF Jumper_SolderJumper_3_Bridged12 JP 0 0 Y N 1 F N
+F0 "JP" -100 -100 50 H V C CNN
+F1 "Jumper_SolderJumper_3_Bridged12" 0 110 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ SolderJumper*Bridged12*
+$ENDFPLIST
+DRAW
+A -40 0 40 901 -901 0 1 0 N -40 40 -40 -40
+A -40 0 40 901 -901 0 1 0 F -40 40 -40 -40
+A 40 0 40 -899 899 0 1 0 N 40 -40 40 40
+A 40 0 40 -899 899 0 1 0 F 40 -40 40 40
+S -40 20 -20 -20 0 1 0 F
+S -20 40 20 -40 0 1 0 F
+P 2 0 1 0 -100 0 -80 0 N
+P 2 0 1 0 -40 40 -40 -40 N
+P 2 0 1 0 0 -50 0 -40 N
+P 2 0 1 0 40 40 40 -40 N
+P 2 0 1 0 100 0 80 0 N
+X A 1 -200 0 100 R 50 50 1 1 P
+X C 2 0 -150 100 U 50 50 1 1 I
+X B 3 200 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
@@ -182,6 +274,62 @@ X GND 2 0 -300 100 U 50 50 1 1 W
 X EN 3 -400 -100 100 R 50 50 1 1 I
 X NC 4 300 -100 100 L 50 50 1 1 N N
 X VOUT 5 400 100 100 L 50 50 1 1 w
+ENDDRAW
+ENDDEF
+#
+# TSM2309_TSM2309
+#
+DEF TSM2309_TSM2309 Q 0 40 Y Y 1 F N
+F0 "Q" 0 -600 50 H V C CNN
+F1 "TSM2309_TSM2309" 0 600 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+C 0 0 130 1 1 0 f
+C 50 -75 5 1 1 0 N
+C 50 -55 5 1 1 0 N
+C 50 75 5 1 1 0 N
+P 2 1 1 0 -50 -55 -50 -75 N
+P 2 1 1 0 -50 -55 -50 -35 N
+P 2 1 1 0 -50 0 -50 -20 N
+P 2 1 1 0 -50 0 -50 20 N
+P 2 1 1 0 -50 75 -50 35 N
+P 2 1 1 0 50 -55 -50 -55 N
+P 2 1 1 0 110 -8 70 -8 N
+P 3 1 1 0 -150 -100 -70 -100 -70 55 N
+P 3 1 1 0 50 -100 50 0 -50 0 N
+P 3 1 1 0 50 100 50 55 -50 55 N
+P 4 1 1 0 35 0 5 20 5 -20 35 0 F
+P 4 1 1 0 90 -10 110 20 70 20 90 -10 F
+P 5 1 1 0 45 -75 90 -75 90 55 90 75 45 75 N
+X G 1 -250 -100 100 R 50 50 1 1 B
+X S 2 50 -200 100 U 50 50 1 1 B
+X D 3 50 200 100 D 50 50 1 1 B
+ENDDRAW
+ENDDEF
+#
+# dk_Coaxial-Connectors-RF_0734120114
+#
+DEF dk_Coaxial-Connectors-RF_0734120114 J 0 40 Y Y 1 F N
+F0 "J" -50 50 60 H V R CNN
+F1 "dk_Coaxial-Connectors-RF_0734120114" 50 -100 60 H V L CNN
+F2 "digikey-footprints:Molex_734120114_UMC_RF_CONN_Vertical" 200 200 60 H I L CNN
+F3 "https://www.molex.com/pdm_docs/sd/734120110_sd.pdf" 200 300 60 H I L CNN
+F4 "WM3894CT-ND" 200 400 60 H I L CNN "Digi-Key_PN"
+F5 "0734120114" 200 500 60 H I L CNN "MPN"
+F6 "Connectors, Interconnects" 200 600 60 H I L CNN "Category"
+F7 "Coaxial Connectors (RF)" 200 700 60 H I L CNN "Family"
+F8 "https://www.molex.com/pdm_docs/sd/734120110_sd.pdf" 200 800 60 H I L CNN "DK_Datasheet_Link"
+F9 "/product-detail/en/molex-llc/0734120114/WM3894CT-ND/2421931" 200 900 60 H I L CNN "DK_Detail_Page"
+F10 "CONN UMC RCPT STR 50 OHM SMD" 200 1000 60 H I L CNN "Description"
+F11 "Molex, LLC" 200 1100 60 H I L CNN "Manufacturer"
+F12 "Active" 200 1200 60 H I L CNN "Status"
+DRAW
+A 2 -1 52 1789 -266 0 1 0 N -50 0 50 -25
+A 3 1 53 271 -1789 0 1 0 N 50 25 -50 0
+C 0 0 25 0 1 0 F
+X ~ 1 0 -200 145 U 50 50 1 1 P
+X ~ 2 200 0 175 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
