@@ -976,4 +976,38 @@ Text Notes 9600 2450 0    50   ~ 0
 VDDA Decoupling
 Text Notes 5250 5400 0    50   ~ 0
 Status LEDs
+$Comp
+L Device:R R?
+U 1 1 5E4267A8
+P 4850 3850
+F 0 "R?" H 4780 3804 50  0000 R CNN
+F 1 "10K" H 4780 3895 50  0000 R CNN
+F 2 "" V 4780 3850 50  0001 C CNN
+F 3 "~" H 4850 3850 50  0001 C CNN
+	1    4850 3850
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E429908
+P 4850 4100
+F 0 "#PWR?" H 4850 3850 50  0001 C CNN
+F 1 "GND" H 4855 3927 50  0000 C CNN
+F 2 "" H 4850 4100 50  0001 C CNN
+F 3 "" H 4850 4100 50  0001 C CNN
+	1    4850 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 4100 4850 4000
+Wire Wire Line
+	4850 3700 4850 3600
+Wire Wire Line
+	4850 3600 4950 3600
+NoConn ~ 9800 4800
+NoConn ~ 9800 4900
+NoConn ~ 9800 5000
+NoConn ~ 9800 5100
+NoConn ~ 9800 5200
+NoConn ~ 9800 5300
 $EndSCHEMATC
